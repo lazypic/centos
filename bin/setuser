@@ -1,0 +1,33 @@
+#!/bin/sh
+
+# Removes existing user setting.
+cd ~
+grep -F -v lazypicUserEnvSetting .bashrc > .bashrc.tmp
+mv -f .bashrc .bashrc.bak
+mv .bashrc.tmp .bashrc
+cd -
+
+zenity --text-info --title="Welcome to Lazypic" --filename="~/centos/etc/welcome.txt" --checkbox="동의(agree)"
+
+case $? in
+	0)
+		# user env setting
+		ID=$(zenity --entry --title="id" --text="id" --entry-text="$USER")
+		NAMEENG=$(zenity --entry --title="name eng" --text="영문이름")
+		NAMEKOR=$(zenity --entry --title="name kor" --text="한글이름")
+		EMAIL=$(zenity --entry --title="E-mail" --text="이메일(E-maile)")
+		PART=$(zenity --entry --title="Select Part" --text="팀(부서)를 선택해주세요." rnd marketing art game)
+		TASK=$(zenity --entry --title="Select Task" --text="Task를 선택해주세요." pm lookdev ani lighting comp)
+		echo "export ID="$ID" #lazypicUserEnvSetting" >> ~/.bashrc # 작업하는 곳이 바뀔 수 있고, 공용 id를 사용하는 곳은 $USER 값이 같기 때문에 대비를 위해서 셋팅함.
+		echo "export NAMEENG="$NAMEENG" #lazypicUserEnvSetting" >> ~/.bashrc
+		echo "export NAMEKOR="$NAMEKOR" #lazypicUserEnvSetting" >> ~/.bashrc
+		echo "export EMAIL=$EMAIL #lazypicUserEnvSetting" >> ~/.bashrc
+		echo "export PART=$PART #lazypicUserEnvSetting" >> ~/.bashrc
+		echo "export TASK=$TASK #lazypicUserEnvSetting" >> ~/.bashrc
+		zenity --info --text="사용자 환경변수 설정이 완료되었습니다."
+		;;
+	1)
+		echo "quit";;
+	-1)
+		echo "quit";;
+esac
