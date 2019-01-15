@@ -1,4 +1,5 @@
 #!/bin/sh
+yum -y install epel-release
 yum -y install yasm
 yum -y install fribidi
 yum -y install youtube-dl
