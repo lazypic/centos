@@ -7,7 +7,7 @@ mv -f .bashrc .bashrc.bak
 mv .bashrc.tmp .bashrc
 cd -
 
-zenity --text-info --title="Welcome to Lazypic" --filename="~/centos/etc/welcome.txt" --checkbox="동의(agree)"
+zenity --text-info --title="Welcome to Lazypic" --filename="$HOME/centos/etc/welcome.txt" --checkbox="동의(agree)"
 
 case $? in
 	0)
