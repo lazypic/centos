@@ -6,3 +6,4 @@ djv.sh
 mpv.sh
 rmbeep.sh
 trans.sh
+rmhotcorner.sh
