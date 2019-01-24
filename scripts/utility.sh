@@ -8,6 +8,7 @@ yum -y install transmission
 yum -y install tigervnc
 yum -y install filezilla
 yum -y install pandoc
+yum -y install key-mon
 yum -y install tree
 
 # ripgrep
