@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Removes existing user setting.
+cd ~
+grep -F -v lazypicUserEnvSetting .bashrc > .bashrc.tmp
+mv -f .bashrc .bashrc.bak
+mv .bashrc.tmp .bashrc
+cd -

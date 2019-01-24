@@ -7,6 +7,7 @@ yum -y install mesa-libGLU # for Nuke and Other Graphics SW.
 yum -y install transmission
 yum -y install tigervnc
 yum -y install filezilla
+yum -y install pandoc
 yum -y install tree
 
 # ripgrep
