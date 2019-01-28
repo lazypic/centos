@@ -7,3 +7,4 @@ mpv.sh
 rmbeep.sh
 trans.sh
 rmhotcorner.sh
+pip.sh
