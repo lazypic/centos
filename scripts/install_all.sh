@@ -8,3 +8,4 @@ rmbeep.sh
 trans.sh
 rmhotcorner.sh
 pip.sh
+devtools.sh
