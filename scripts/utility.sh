@@ -10,6 +10,7 @@ yum -y install filezilla
 yum -y install pandoc
 yum -y install key-mon
 yum -y install tree
+yum -y install ImageMagick
 
 # ripgrep
 yum-config-manager --add-repo=https://copr.fedorainfracloud.org/coprs/carlwgeorge/ripgrep/repo/epel-7/carlwgeorge-ripgrep-epel-7.repo
