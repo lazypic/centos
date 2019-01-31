@@ -9,3 +9,4 @@ trans.sh
 rmhotcorner.sh
 pip.sh
 devtools.sh
+ffmpeg.sh
