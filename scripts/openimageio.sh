@@ -4,6 +4,7 @@ if [[ $EUID -ne 0 ]]; then
 	exit 1
 fi
 
+yum -y install OpenColorIO
 yum -y install OpenImageIO
 yum -y install OpenImageIO-iv
 yum -y install OpenImageIO-devel
