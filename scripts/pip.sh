@@ -9,6 +9,7 @@ pip install --user PySide2
 pip install --user numpy
 pip install --user Cython
 pip install --user openpyxl
+pip install --user --upgrade lxml # openpyxl 사용시 lxml 버전이 낮아서 뜨는 경고를 제거해줍니다.
 pip install --user xlsxwriter
 pip install --user xlrd
 pip install --user xlwt
