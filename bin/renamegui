@@ -1,0 +1,4 @@
+#!/bin/sh
+FIND=$(zenity --entry --title="Rename" --text="바꿀 문자열을 입력하세요.")
+DST=$(zenity --entry --title="Rename" --text="바뀔 문자열을 입력하세요.")
+rename $FIND $DST *
