@@ -1,8 +1,8 @@
 #!/bin/sh
-STDIN=$(zenity --title "Pick a color" --color-selection 2> /dev/null)
-SEQ=${STDIN//[rgb( )]}
+STDOUT=$(zenity --title "Pick a color" --color-selection 2> /dev/null)
+SEQ=${STDOUT//[rgb( )]}
 NUM=${SEQ//,/ }
-echo $STDIN
+echo $STDOUT
 echo $NUM
 printf "#%02X%02X%02X\n" $NUM
 
