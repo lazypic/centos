@@ -16,3 +16,5 @@ cd ../OpenEXR
 ./configure --prefix="/home/$USER/app/openexr" --with-ilmbase-prefix="/home/$USER/app/IlmBase"
 make
 make install
+cd /home/$USER/app
+rm v2.3.0.tar.gz

@@ -8,8 +8,8 @@ if [ ! -d "/home/$USER/app/ffmpeg" ]; then
 fi
 
 cd /home/$USER/app/ffmpeg
-wget http://johnvansickle.com/ffmpeg/builds/ffmpeg-git-64bit-static.tar.xz
-tar xpvf ffmpeg-git-64bit-static.tar.xz --strip 1
-rm ffmpeg-git-64bit-static.tar.xz
+wget https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz --no-check-certificate
+tar xpvf ffmpeg-release-amd64-static.tar.xz --strip 1
+rm ffmpeg-release-amd64-static.tar.xz
 
 
