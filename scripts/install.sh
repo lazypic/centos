@@ -13,6 +13,7 @@ if [[ $EUID -e 0 ]]; then
 ./root/handbrake.sh
 ./root/openimageio.sh
 ./root/pip_install.sh
+./root/slack.sh
 ./rmbeep.sh
 else
 # install $USER
