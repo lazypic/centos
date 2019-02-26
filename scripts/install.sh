@@ -1,5 +1,5 @@
 #!/bin/sh
-if [[ $EUID -ne 0 ]]; then
+if [[ $EUID -e 0 ]]; then
 ./root/nvidia.sh
 ./root/utility.sh
 ./root/code.sh
@@ -11,8 +11,7 @@ if [[ $EUID -ne 0 ]]; then
 ./root/openimageio.sh
 ./root/pip_install.sh
 ./rmbeep.sh
-fi
-
+else
 # install $USER
 ./user/trans.sh
 ./user/ocio_config.sh
@@ -26,3 +25,5 @@ scl enable devtoolset-6 ./user/cmake.sh
 scl enable devtoolset-6 ./user/openexr.sh
 scl enable devtoolset-6 ./user/opencolorio.sh
 scl enable devtoolset-6 ./user/alembic.sh
+fi
+
